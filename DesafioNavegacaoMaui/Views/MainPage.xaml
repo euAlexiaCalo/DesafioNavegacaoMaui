@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DesafioNavegacaoMaui.Views.MainPage"
+             Title="">
+
+    <Grid
+            Padding="0"
+            Margin="0">
+        <Image
+            Source="canada_parks_mountains.jpg"
+            Aspect="AspectFill"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand"/>
+        <ScrollView
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+            <Border
+                BackgroundColor="White"
+                Opacity="0.8"
+                StrokeShape="RoundRectangle 30"
+                StrokeThickness="0"
+                Shadow="0 0 12 Grey 0.8"
+                MaximumWidthRequest="1000"
+                MinimumHeightRequest="500"
+                Margin="20">
+                <Grid
+                    RowDefinitions="Auto, Auto, *, Auto"
+                    RowSpacing="10"
+                    Padding="40,100"
+                    VerticalOptions="Fill">
+                    <Label
+                        Text="Bem-Vindo ao Nosso App"
+                        Grid.Row="0"
+                        FontSize="36"
+                        TextColor="DarkGreen"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"/>
+                    <Label
+                        Text="Sua jornada começa aqui."
+                        Grid.Row="1"
+                        FontSize="20"
+                        TextColor="Gray"
+                        HorizontalOptions="Center"/>
+                    <Button
+                        Text="Acessar"
+                        Grid.Row="3"
+                        Command="{Binding AcessarCommand}"
+                        Style="{StaticResource AcessButton}" />
+                </Grid>
+            </Border>
+        </ScrollView>
+    </Grid>
+
+</ContentPage>
